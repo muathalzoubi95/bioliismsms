@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Script from "next/script";
 import Head from "next/head";
+import Script from "next/script";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Bio Links App",
@@ -16,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
+        {/* Google Tag Manager script */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-10860808864"
           strategy="afterInteractive"
