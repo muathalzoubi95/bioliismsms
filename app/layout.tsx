@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Head from "next/head";
 import Script from "next/script";
 import "./globals.css";
 
@@ -15,8 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        {/* Google Tag Manager script */}
+      <body>
+         {/* Google Tag (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-10860808864"
           strategy="afterInteractive"
@@ -29,8 +28,7 @@ export default function RootLayout({
             gtag('config', 'AW-10860808864');
           `}
         </Script>
-      </Head>
-      <body>{children}</body>
+        {children}</body>
     </html>
   );
 }
