@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export default function HomePage() {
-  const link = "https://zaimsor.com?label=e55b639a3aa1eab46b21b433bbf3c182";
+  const link = "https://zaimsor.com?label=0cbf4a0db8b341ac5b659c6ce081bc01";
 
   const items = [
     { title: "الدفع السريع", href: link, Icon: CreditCard },
