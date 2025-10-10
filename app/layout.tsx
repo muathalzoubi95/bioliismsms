@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import Script from "next/script";
+import Script from "next/script"
+
 import "./globals.css";
+
+
 
 export const metadata: Metadata = {
   title: "Bio Links App",
@@ -14,13 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-         {/* Google Tag (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-10860808864"
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads-tag" strategy="afterInteractive">
+          <head>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-10860808864" strategy="afterInteractive" />
+        <Script id="google-ads-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -28,7 +27,11 @@ export default function RootLayout({
             gtag('config', 'AW-10860808864');
           `}
         </Script>
-        {children}</body>
+      </head>
+      <body
+      >
+        {children}
+      </body>
     </html>
   );
 }
